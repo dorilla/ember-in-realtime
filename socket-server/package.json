@@ -1,0 +1,19 @@
+{
+  "name": "Socket-Server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Maglasang",
+  "license": "MIT",
+  "devDependencies": {
+    "socket.io": "^1.3.5"
+  },
+  "dependencies": {
+    "restify": "^3.0.1",
+    "underscore": "^1.8.2",
+    "uuid": "^2.0.1"
+  }
+}
