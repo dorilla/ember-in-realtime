@@ -1,0 +1,33 @@
+<div class="sidebar">
+  {{#unless signedIn}}
+    <form {{action 'enterUsername' on='submit'}}>
+      <label for="username">Enter a username</label>
+      <br>
+      {{input value=username id='username'}}
+      <button type="submit">Submit</button>
+    </form>
+  {{else}}
+    <h3>Signed in as {{username}}</h3>
+
+    <form {{action 'submitMessage' on='submit'}}>
+      <label for="curr-message">Message</label>
+      {{input value=currMessage id='curr-message'}}
+      <button type="submit">Submit</button>
+    </form>
+
+    <ul>
+      {{#each arrangedContent as |message|}}
+        <li>
+          <h5>{{message.fromUsername}} &middot; {{message.createdAtFromNow}}</h5>
+          <p>{{message.message}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{/unless}}
+</div>
+
+<div class="content">
+  <div class="canvas">
+    <canvas resize="true" id="chat-canvas"></canvas>
+  </div>
+</div>

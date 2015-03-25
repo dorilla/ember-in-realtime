@@ -19,6 +19,15 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'font-src': "'self' http://code.ionicframework.com http://fonts.gstatic.com",
+    'connect-src': "'self' http://localhost:1337 ws://localhost:1337",
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline' http://fonts.gstatic.com http://fonts.googleapis.com http://code.ionicframework.com",
+    'media-src': "'self'"
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
