@@ -39,7 +39,7 @@ export default Ember.ArrayController.extend({
     // only if signedIn
     if (this.get('signedIn')) {
       // connect to the socket
-      this.set('socket', io.connect('http://10.0.1.228:1337', {
+      this.set('socket', io.connect('http://localhost:1337', {
         query: { username: this.get('username') } // send in the entered username
       }));
 
