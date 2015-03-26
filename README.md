@@ -9,6 +9,8 @@ Files in question:
 `app/routes/index.js`
 `app/views/index.js`
 
+Partly live coded for http://www.meetup.com/Ember-JS-DC/
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
